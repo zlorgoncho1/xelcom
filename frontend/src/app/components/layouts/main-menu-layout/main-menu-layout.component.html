@@ -1,0 +1,130 @@
+<div class="dashboard__sidebar -base scroll-bar-1 border-right-light lg:px-30">
+  <div class="sidebar -base-sidebar">
+    <div class="sidebar__inner">
+      <div>
+        <div class="text-16 lh-1 fw-500 text-dark-1 mb-30">Menu</div>
+        <div>
+          <div
+            class="sidebar__item"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/home"
+            routerLinkActive="-is-active"
+          >
+            <a
+              style="cursor: pointer"
+              class="-dark-sidebar-white d-flex items-center text-17 lh-1 fw-500"
+            >
+              <i class="text-20 icon-discovery mr-15"></i>
+              Accueil
+            </a>
+          </div>
+
+          <div
+            class="sidebar__item"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/cours"
+            routerLinkActive="-is-active"
+          >
+            <a
+              style="cursor: pointer"
+              class="-dark-sidebar-white d-flex items-center text-17 lh-1 fw-500"
+            >
+              <i class="text-20 icon-book mr-15"></i>
+              Cours
+            </a>
+          </div>
+
+          <div
+            class="sidebar__item"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/events"
+            routerLinkActive="-is-active"
+          >
+            <a
+              style="cursor: pointer"
+              class="-dark-sidebar-white d-flex items-center text-17 lh-1 fw-500"
+            >
+              <i class="text-20 icon-play-button mr-15"></i>
+              Events
+            </a>
+          </div>
+
+          <div
+            class="sidebar__item"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/articles"
+            routerLinkActive="-is-active"
+          >
+            <a
+              style="cursor: pointer"
+              class="-dark-sidebar-white d-flex items-center text-17 lh-1 fw-500"
+            >
+              <i class="text-20 icon-list mr-15"></i>
+              Articles
+            </a>
+          </div>
+
+          <div
+            class="sidebar__item"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/about"
+            routerLinkActive="-is-active"
+          >
+            <a
+              style="cursor: pointer"
+              class="-dark-sidebar-white d-flex items-center text-17 lh-1 fw-500"
+            >
+              <!-- <i class="text-20 icon-time-management mr-15"></i> -->
+              <i class="text-20 icon-infinity mr-15"></i>
+              A propos
+            </a>
+          </div>
+
+          <div
+            class="sidebar__item"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/contact"
+            routerLinkActive="-is-active"
+          >
+            <a
+              style="cursor: pointer"
+              class="-dark-sidebar-white d-flex items-center text-17 lh-1 fw-500"
+            >
+              <i class="text-20 icon-email mr-15"></i>
+              Contact
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-60">
+        <div class="text-16 lh-1 fw-500 text-dark-1 mb-30">
+          Authentification
+        </div>
+        <div class="">
+          <div class="button -purple-5 text-white">
+            <a
+              style="cursor: pointer"
+              routerLink="/login"
+              class="d-flex items-center justify-between py-15 px-20 text-16 text-purple-1 lh-1 fw-500 -base-sidebar-menu-hover"
+            >
+              Se connecter
+            </a>
+          </div>
+
+          <div
+            class="button -purple-1 text-white -purple-button-purple-1 mt-10"
+          >
+            <a
+              style="cursor: pointer"
+              routerLink="/signup"
+              class="d-flex items-center justify-between py-15 px-20 text-16 lh-1 fw-500 -base-sidebar-menu-hover"
+            >
+              S'inscrire
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

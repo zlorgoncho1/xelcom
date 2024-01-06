@@ -1,0 +1,141 @@
+<main class="main-content bg-beige-1">
+  <header data-anim="fade" data-add-bg="" class="header -base js-header mt-10">
+    <div class="header__container py-10">
+      <div class="row justify-between items-center">
+        <div class="col-auto">
+          <div class="header-left">
+            <div class="header__logo">
+              <a data-barba routerLink="/home">
+                <img src="assets/img/general/logo.svg" alt="logo" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-auto">
+          <div class="header-right d-flex items-center">
+            <div class="header-right__buttons md:d-none">
+              <a
+                routerLink="/login"
+                class="button -sm -rounded -dark-1 text-white"
+                >Se connecter</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="content-wrapper js-content-wrapper">
+    <section class="form-page js-mouse-move-container">
+      <div class="form-page__img bg-dark-1">
+        <div class="form-page-composition">
+          <div class="-bg">
+            <img
+              data-move="30"
+              class="js-mouse-move"
+              src="assets/img/login/bg.png"
+              alt="bg"
+            />
+          </div>
+          <div class="-el-1">
+            <img
+              data-move="20"
+              class="js-mouse-move"
+              src="assets/img/home-9/hero/bg.png"
+              alt="image"
+            />
+          </div>
+          <div class="-el-2">
+            <img
+              data-move="40"
+              class="js-mouse-move"
+              src="assets/img/home-9/hero/1.png"
+              alt="icon"
+            />
+          </div>
+          <div class="-el-3">
+            <img
+              data-move="40"
+              class="js-mouse-move"
+              src="assets/img/home-9/hero/2.png"
+              alt="icon"
+            />
+          </div>
+          <div class="-el-4">
+            <img
+              data-move="40"
+              class="js-mouse-move"
+              src="assets/img/home-9/hero/3.png"
+              alt="icon"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="form-page__content lg:py-50">
+        <div class="container">
+          <div class="row justify-center items-center">
+            <div class="col-xl-8 col-lg-9">
+              <div
+                class="px-50 py-50 md:px-25 md:py-25 bg-white shadow-1 rounded-16"
+              >
+                <h3 class="text-30 lh-13">S'inscrire</h3>
+                <p class="mt-10">
+                  Vous avez déjà un compte?
+                  <a
+                    style="cursor: pointer"
+                    routerLink="/signup"
+                    class="text-purple-1"
+                    >Se connecter</a
+                  >
+                </p>
+
+                <form
+                  class="contact-form respondForm__form row y-gap-20 pt-30"
+                  action="#"
+                >
+                  <div class="col-lg-6">
+                    <label class="text-16 lh-1 fw-500 text-dark-1 mb-10"
+                      >Email address *</label
+                    >
+                    <input type="text" name="title" placeholder="Name" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label class="text-16 lh-1 fw-500 text-dark-1 mb-10"
+                      >Username *</label
+                    >
+                    <input type="text" name="title" placeholder="Name" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label class="text-16 lh-1 fw-500 text-dark-1 mb-10"
+                      >Password *</label
+                    >
+                    <input type="text" name="title" placeholder="Name" />
+                  </div>
+                  <div class="col-lg-6">
+                    <label class="text-16 lh-1 fw-500 text-dark-1 mb-10"
+                      >Confirm Password *</label
+                    >
+                    <input type="text" name="title" placeholder="Name" />
+                  </div>
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      name="submit"
+                      id="submit"
+                      class="button -md -green-1 text-dark-1 fw-500 w-1/1"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
