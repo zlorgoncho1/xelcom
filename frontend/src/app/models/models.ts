@@ -1,8 +1,3 @@
-export interface Category {
-  uuid: string;
-  name: string;
-}
-
 export type SocialNetWorkName =
   | 'FACEBOOK'
   | 'TWITTER'
@@ -10,23 +5,24 @@ export type SocialNetWorkName =
   | 'INSTAGRAM'
   | 'GITHUB';
 
+export type ReviewType = 'COURSE' | 'INSTRUCTORS';
+
+export type Star = 1 | 2 | 3 | 4 | 5;
+
+export type UUID = string;
+
+export interface Category {
+  uuid: UUID;
+  name: string;
+}
+
 export interface SocialLink {
   name: SocialNetWorkName;
   url: string;
 }
 
-export interface Instructor {
-  uuid: string;
-  imageUrl: string;
-  fullname: string;
-  jobTitle: string;
-  biography: string;
-  socialLinks: SocialLink[];
-  Reviews: Review[];
-}
-
 export interface Lesson {
-  uuid: string;
+  uuid: UUID;
   numberOfLesson: string;
   title: string;
   textualContent: any;
@@ -34,15 +30,11 @@ export interface Lesson {
 }
 
 export interface CoursSection {
-  uuid: string;
+  uuid: UUID;
   numberOfSection: string;
   name: string;
-  lessons: Lesson[];
+  lessonsUUIDs: UUID[];
 }
-
-export type ReviewType = 'COURSE' | 'INSTRUCTORS';
-
-export type Star = '1' | '2' | '3' | '4' | '5';
 
 export interface Review {
   object: ReviewType;
@@ -57,20 +49,20 @@ export interface Review {
 export type State = 'ACTIVE' | 'DESACTIVE' | 'ARCHIVER';
 
 export interface Course {
-  uuid: string;
+  uuid: UUID;
   title: string;
   headline: string;
   description: string;
   coverUrl: string;
-  instructor: Instructor;
-  categoriePrincipale: Category;
-  categoriesSecondaires: Category[];
+  instructor: UUID;
+  categoriePrincipaleUUID: UUID;
+  categoriesSecondairesUUIDs: UUID[];
   tags: string[];
   requirements: string[];
   level: string;
   skills: string[];
   language: string;
-  content: CoursSection[];
+  sectionUUIDs: UUID[];
   duration: number;
   hasLifetimeAccess: boolean;
   accessDuration: number; // In month
@@ -80,7 +72,7 @@ export interface Course {
   prixPromo: number;
   hasMoneyBackGarantee: boolean;
   numberOfDaysOfMoneyBackGarantee: number;
-  reviews: Review[];
+  reviewUUIDs: UUID[];
   numberOfEnrollement: number;
   currentNumberOfEnrollement: number;
   state: State;
@@ -89,14 +81,14 @@ export interface Course {
 }
 
 export interface Event {
-  uuid: string;
+  uuid: UUID;
   title: string;
   description: string;
   coverUrl: string;
   date: Date;
   location: string;
-  speakers: Instructor[];
-  categories: Category[];
+  speakerUUIDs: UUID[];
+  categoryUUIDs: UUID[];
   tags: string[];
   skills: string[];
   eventContent: string[];
@@ -110,4 +102,14 @@ export interface Event {
   state: State;
   createdAt: Date;
   updatedAt: Date;
+}
+
+export interface Instructor {
+  uuid: UUID;
+  imageUrl: string;
+  fullname: string;
+  jobTitle: string;
+  biography: string;
+  socialLinkUUIDs: UUID[];
+  reviewUUIDs: UUID[];
 }
