@@ -76,3 +76,8 @@ frontend/src/assets/.gitkeep
 frontend/.angular
 frontend/.editorconfig
 frontend/.vscode
+
+
+# BACKEND
+
+backend/.utils

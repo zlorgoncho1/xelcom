@@ -1,0 +1,13 @@
+[
+  {
+    "name": "default",
+    "type": "postgres",
+    "host": "database",
+    "port": 5432,
+    "username": "xelcom",
+    "password": "H4R74Z9EJ984US6KpP",
+    "database": "",
+    "synchronize": false,
+    "entities": ["entities/*.js"]
+  }
+]

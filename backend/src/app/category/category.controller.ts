@@ -1,14 +1,16 @@
 import { Controller } from '@nestjs/common';
-import { Crud, CrudController } from '@nestjsx/crud';
-import { CategoryEntity } from './category.entity';
 import { CategoryService } from './category.service';
+import { ApiTags } from '@nestjs/swagger';
+import { Crud, CrudController } from '@dataui/crud';
+import { Category } from '../../entities/Category';
 
+@ApiTags('Category')
 @Crud({
   model: {
-    type: CategoryEntity,
+    type: Category,
   },
 })
 @Controller('category')
-export class CategoryController implements CrudController<CategoryEntity> {
+export class CategoryController implements CrudController<Category> {
   constructor(public service: CategoryService) {}
 }

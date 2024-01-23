@@ -3,7 +3,9 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CategoryModule } from './app/category/category.module';
-import { SwaggerModule } from '@nestjs/swagger';
+import { CourseModule } from './app/course/course.module';
+import { InstructorModule } from './app/instructor/instructor.module';
+import { EventModule } from './app/event/event.module';
 
 @Module({
   imports: [
@@ -19,6 +21,9 @@ import { SwaggerModule } from '@nestjs/swagger';
       // entities: [__dirname + '/../**/*.entity.{js,ts}'],
     }),
     CategoryModule,
+    CourseModule,
+    InstructorModule,
+    EventModule,
   ],
   controllers: [AppController],
   providers: [AppService],
